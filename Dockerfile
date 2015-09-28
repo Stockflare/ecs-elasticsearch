@@ -11,6 +11,7 @@ COPY config/elasticsearch.yml /usr/share/elasticsearch/config/
 VOLUME /usr/share/elasticsearch/data
 
 COPY docker-entrypoint.sh /
+COPY backup_cluster.sh /
 
 RUN rm -rf /usr/share/elasticsearch/plugins/cloud-aws
 RUN rm -rf /usr/share/elasticsearch/plugins/head
