@@ -1,0 +1,10 @@
+elasticsearch:
+  build: .
+  command: elasticsearch
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  env_file:
+    - ./.env
+  volumes:
+    - ./data:/data/elasticsearch
