@@ -10,4 +10,4 @@ curl -XPUT "http://${ELASTICSEARCH_ENDPOINT}:9200/_snapshot/s3_snapshots" -d "{
 }"
 
 # Stanpshot the Cluster
-curl -XPUT "http://${ELASTICSEARCH_ENDPOINT}:9200/_snapshot/s3_snapshots/snapshot_$(date +"%Y_%m_%d_%H_%I_%S")?wait_for_completion=true"
+curl -XPUT "http://${ELASTICSEARCH_ENDPOINT}:9200/_snapshot/s3_snapshots/snapshot_$(date +"%Y_%m_%d_%H_%M_%S")?wait_for_completion=true"
